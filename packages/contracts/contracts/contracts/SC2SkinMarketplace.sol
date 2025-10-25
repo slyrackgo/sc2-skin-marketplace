@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.23;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
@@ -27,11 +27,10 @@ contract SC2SkinMarketplace is ReentrancyGuard, Ownable {
     mapping(uint256 => Listing) public listings;
     uint256 public listingCounter;
     
-    // Skin metadata
     struct SkinMetadata {
         string name;
-        string rarity; // Common, Rare, Epic, Legendary
-        string gameUnit; // Marine, Zergling, Zealot, etc.
+        string rarity;
+        string gameUnit;
         string imageURI;
     }
     
@@ -62,7 +61,6 @@ contract SC2SkinMarketplace is ReentrancyGuard, Ownable {
     }
     
     function _initializeDefaultSkins() internal {
-        // Initialize some default SC2 skins
         skinMetadata[1] = SkinMetadata(
             "Golden Marine",
             "Rare",
@@ -101,7 +99,6 @@ contract SC2SkinMarketplace is ReentrancyGuard, Ownable {
         require(price > 0, "Price must be positive");
         require(skinToken.balanceOf(msg.sender, skinId) >= amount, "Insufficient skins");
         
-        // Transfer skins to marketplace (escrow)
         skinToken.burnSkin(msg.sender, skinId, amount);
         
         listingCounter++;
@@ -124,10 +121,8 @@ contract SC2SkinMarketplace is ReentrancyGuard, Ownable {
         
         listing.active = false;
         
-        // Transfer payment to seller
         payable(listing.seller).transfer(msg.value);
         
-        // Mint skin to buyer
         skinToken.mintSkin(msg.sender, listing.skinId, listing.amount);
         
         emit SkinPurchased(
@@ -147,7 +142,6 @@ contract SC2SkinMarketplace is ReentrancyGuard, Ownable {
         
         listing.active = false;
         
-        // Return skins to seller
         skinToken.mintSkin(msg.sender, listing.skinId, listing.amount);
         
         emit SkinDelisted(listingId);
