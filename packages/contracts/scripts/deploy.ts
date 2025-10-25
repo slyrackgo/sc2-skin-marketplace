@@ -66,7 +66,8 @@ async function main() {
     console.error("Error:", error.message);
     
     if (error.message.includes("insufficient funds")) {
-      console.log("\n💡 Get test ETH from: https://faucet.xsollazk.com/faucet");
+      console.log("\n💡 Get test ETH from: https://faucet.quicknode.com/ethereum/sepolia");
+      console.log("Then bridge to zkSync: https://portal.zksync.io/bridge");
     }
     
     process.exit(1);
