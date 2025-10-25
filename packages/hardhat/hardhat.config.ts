@@ -1,13 +1,11 @@
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
-import "@matterlabs/hardhat-zksync";
+require("@matterlabs/hardhat-zksync");
+require("@nomicfoundation/hardhat-toolbox");
 
-const config: HardhatUserConfig = {
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
   zksolc: {
-    version: "latest",
+    version: "1.3.16",
     settings: {
-      isSystem: false,
-      forceEvmla: false,
       optimizer: {
         enabled: true,
         mode: "3",
@@ -20,11 +18,10 @@ const config: HardhatUserConfig = {
       url: "https://testnet.xsollazk.com",
       ethNetwork: "sepolia",
       zksync: true,
-      verifyURL: "https://verification-sepolia.xsollazk.com/contract_verification",
     },
   },
   solidity: {
-    version: "0.8.19",
+    version: "0.8.23",
     settings: {
       optimizer: {
         enabled: true,
@@ -33,5 +30,3 @@ const config: HardhatUserConfig = {
     },
   },
 };
-
-export default config;
