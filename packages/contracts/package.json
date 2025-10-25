@@ -1,22 +1,36 @@
 {
   "name": "contracts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts --network xsolla-zk-sepolia",
+    "test": "hardhat test",
+    "verify": "hardhat verify --network xsolla-zk-sepolia"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
     "@matterlabs/hardhat-zksync": "^1.6.2",
-    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
-    "hardhat": "^2.26.3"
+    "@matterlabs/hardhat-zksync-deploy": "^1.8.0",
+    "@matterlabs/hardhat-zksync-solc": "^1.5.1",
+    "@matterlabs/hardhat-zksync-verify": "^1.9.1",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.0.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.0.0",
+    "hardhat": "^2.17.0",
+    "hardhat-gas-reporter": "^1.0.0",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.0",
+    "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@matterlabs/zksync-contracts": "^29.0.0",
-    "@openzeppelin/contracts": "^5.4.0"
+    "@openzeppelin/contracts": "^4.9.0",
+    "zksync-ethers": "^5.9.0"
   }
 }

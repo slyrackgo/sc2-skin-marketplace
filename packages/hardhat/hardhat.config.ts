@@ -4,8 +4,10 @@ import "@matterlabs/hardhat-zksync";
 
 const config: HardhatUserConfig = {
   zksolc: {
-    version: "1.5.1", // Match your zksync-solc version
+    version: "latest",
     settings: {
+      isSystem: false,
+      forceEvmla: false,
       optimizer: {
         enabled: true,
         mode: "3",
@@ -20,9 +22,6 @@ const config: HardhatUserConfig = {
       zksync: true,
       verifyURL: "https://verification-sepolia.xsollazk.com/contract_verification",
     },
-    hardhat: {
-      zksync: false,
-    }
   },
   solidity: {
     version: "0.8.19",

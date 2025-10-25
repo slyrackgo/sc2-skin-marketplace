@@ -1,0 +1,106 @@
+/* Marketplace additional styles */
+.loading {
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.demo-notice {
+  background: rgba(255, 193, 7, 0.2);
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 2rem;
+  color: #ffc107;
+}
+
+.no-listings, .no-skins {
+  grid-column: 1 / -1;
+  padding: 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.unit {
+  color: #00d4ff;
+  margin: 0.25rem 0;
+}
+
+.rarity {
+  margin: 0.25rem 0;
+  font-weight: bold;
+}
+
+.rarity.common { color: #808080; }
+.rarity.rare { color: #007bff; }
+.rarity.epic { color: #6f42c1; }
+.rarity.legendary { color: #fd7e14; }
+
+.seller {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0.25rem 0;
+}
+
+.buy-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+/* MySkins additional styles */
+.skin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.rarity-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.rarity-badge.common {
+  background: #808080;
+  color: white;
+}
+
+.rarity-badge.rare {
+  background: #007bff;
+  color: white;
+}
+
+.rarity-badge.epic {
+  background: #6f42c1;
+  color: white;
+}
+
+.rarity-badge.legendary {
+  background: #fd7e14;
+  color: white;
+}
+
+.skin-id {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.skin-balance {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #00ff88;
+}
+
+.demo-button {
+  background: #666;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: not-allowed;
+  width: 100%;
+}
