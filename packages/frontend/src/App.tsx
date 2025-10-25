@@ -7,8 +7,8 @@ import { ListSkin } from '../src/components/ListSkin';
 import './App.css';
 
 // Temporary addresses - replace with your deployed contract addresses
-const MARKETPLACE_ADDRESS = "0x8C41C7bfd0568D7cf1aeb51d8ccA562771959ad0"; // Replace after deployment
-const SKIN_TOKEN_ADDRESS = "0x0000000000000000000000000000000000000000"; // Replace after deployment
+const MARKETPLACE_ADDRESS = "0x8C41C7bfd0568D7cf1aeb51d8ccA562771959ad0"; // acc1
+const SKIN_TOKEN_ADDRESS = "0x1a1C76154Eb6973831BA9176c12e5929068CCC3A"; // acc2
 
 // Extend Window interface to include ethereum
 declare global {

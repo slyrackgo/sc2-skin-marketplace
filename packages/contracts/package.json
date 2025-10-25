@@ -13,11 +13,12 @@
     "@matterlabs/hardhat-zksync-solc": "^1.5.1",
     "@matterlabs/hardhat-zksync-verify": "^1.9.1",
     "@types/node": "^20.10.5",
-    "hardhat": "^2.19.1",
+    "hardhat": "^2.26.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.9.0"
+    "@openzeppelin/contracts": "^4.9.0",
+    "zksync-ethers": "^5.9.0"
   }
 }

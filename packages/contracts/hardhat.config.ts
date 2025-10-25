@@ -3,7 +3,7 @@ import "@matterlabs/hardhat-zksync";
 
 const config: HardhatUserConfig = {
   zksolc: {
-    version: "1.3.16",
+    version: "1.4.1",
     settings: {
       optimizer: {
         enabled: true,
@@ -12,12 +12,12 @@ const config: HardhatUserConfig = {
     },
   },
   defaultNetwork: "xsolla-zk-sepolia",
-  networks: {
+  networks: { //rpc connect
     "xsolla-zk-sepolia": {
-      url: "https://testnet.xsollazk.com",
+      url: "https://mainnet.era.zksync.io/", // Updated URL
       ethNetwork: "sepolia",
       zksync: true,
-      verifyURL: "https://verification-sepolia.xsollazk.com/contract_verification",
+      verifyURL: "explorer-sepolia.xsollazk.com",
     },
     hardhat: {
       zksync: false,
@@ -38,4 +38,3 @@ const config: HardhatUserConfig = {
   },
 };
 
-export default config;
